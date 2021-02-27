@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test-rnav",
-    "slug": "test-rnav",
+    "name": "clubzone",
+    "slug": "clubzone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
