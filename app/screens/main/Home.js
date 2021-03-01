@@ -18,20 +18,15 @@ export default function Home({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={{ padding: 20, flex: 1 }}>
                 <View style={styles.Header}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('ExploreModal')}>
                         <Search />
                     </TouchableOpacity>
-                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                        <TouchableOpacity>
-                            <Notifications />
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{ marginLeft: 20 }}>
-                            <Calender />
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('NotificationsModal')}>
+                        <Notifications />
+                    </TouchableOpacity>
                 </View>
-                <View style={{ marginTop: 30 }}>
-                    <View>
+                <View>
+                    {/* <View>
                         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} automaticallyAdjustContentInsets={false}>
                             <TouchableOpacity style={{ marginRight: 5 }}>
                                 <View>
@@ -48,50 +43,10 @@ export default function Home({ navigation }) {
                                     <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{ marginRight: 5 }}>
-                                <View>
-                                    <Image style={{ width: 60, height: 60, borderRadius: 9999, borderWidth: 2, borderColor: '#C4B5FD' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                </View>
-                            </TouchableOpacity>
                         </ScrollView>
-                    </View>
+                    </View> */}
                     <View style={{ marginTop: 30 }}>
-                        <ScrollView contentContainerStyle={{ paddingBottom: 120 }}>
+                        <ScrollView contentContainerStyle={{  }}>
                             <View style={styles.Cards}>
                                 <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
                                 <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>

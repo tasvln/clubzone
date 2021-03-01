@@ -12,19 +12,18 @@ export default function ChangeUsername({ navigation }) {
                         <View>
                             <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} onPress={() => navigation.goBack()}>
                                 <Back/>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>Verify</Text>
                             </TouchableOpacity>
                         </View>
                         <View style={{ marginTop: 40 }}>
                             <View style={{ marginBottom: 20 }}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', color: '#8B5CF6', fontSize: 18 }}>Enter Verification Code</Text>
+                                <Text style={{ fontFamily: 'Barlow_600SemiBold', color: '#8B5CF6', fontSize: 18 }}>Change Your Username</Text>
                                 <TextInput 
                                     style={{ padding: 20, backgroundColor: '#FFF', marginTop: 10, borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24 }}
-                                    placeholder='Enter 6-Digit Code'
+                                    placeholder='Username'
                                 />
                             </View>
-                            <TouchableOpacity style={{ padding: 20, marginTop: 10, backgroundColor: '#8B5CF6', borderRadius: 10, }} onPress={() => navigation.navigate('Home')}>
-                                <Text style={{ textAlign: 'center', fontSize: 18, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>Verify</Text>
+                            <TouchableOpacity style={{ padding: 20, marginTop: 10, backgroundColor: '#8B5CF6', borderRadius: 10, }}>
+                                <Text style={{ textAlign: 'center', fontSize: 18, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>Change Please</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

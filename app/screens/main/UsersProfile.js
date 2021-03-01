@@ -4,6 +4,7 @@ import { View, KeyboardAvoidingView, TextInput, StyleSheet, Text, Platform, Touc
 import Search from '../../components/svgicons/Search'
 import Notifications from '../../components/svgicons/Notifications'
 import Calender from '../../components/svgicons/Calender'
+import Back from '../../components/svgicons/Back';
 
 
 import Hom from '../../components/svgicons/Home';
@@ -16,16 +17,16 @@ import Twitter from '../../components/svgicons/Twitter'
 import Instagram from '../../components/svgicons/Instagram'
 
 
-export default function Profile({ navigation }) {
+export default function UsersProfile({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ padding: 20, flex: 1 }}>
-                <View style={{ marginBottom: 20, display: 'flex', marginLeft: 'auto' }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
-                        <Settings />
+                <View>
+                    <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }} onPress={() => navigation.goBack()}>
+                        <Back/>
                     </TouchableOpacity>
                 </View>
-                <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
                     <Image style={{ width: 100, height: 100, borderRadius: 35 }} source={{ uri: 'https://picsum.photos/200/300' }} />
                 </View>
                 <View style={{ marginTop: 15 }}>
@@ -58,23 +59,6 @@ export default function Profile({ navigation }) {
                         </TouchableOpacity>
                     </View>
                 </View> */}
-            </View>
-            <View style={{ padding: 20, backgroundColor: '#EDE9FE', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                    <Hom />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Zones')}>
-                    <Category />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Add />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('People')}>
-                    <Users />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                    <Profil />
-                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )

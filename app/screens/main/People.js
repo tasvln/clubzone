@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, KeyboardAvoidingView, TextInput, StyleSheet, Text, Platform, TouchableWithoutFeedback, Button, Keyboard, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native'
+import { View, KeyboardAvoidingView, TextInput, StyleSheet, Text, Platform, TouchableWithoutFeedback, Button, Keyboard, SafeAreaView, TouchableOpacity, Image, ScrollView, TouchableHighlight } from 'react-native'
 
 import Search from '../../components/svgicons/Search'
 import Notifications from '../../components/svgicons/Notifications'
@@ -17,27 +17,24 @@ export default function People({ navigation }) {
         <SafeAreaView style={styles.container}>
             <View style={{ padding: 20, flex: 1 }}>
                 <View style={styles.Header}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('ExploreModal')}>
                         <Search />
                     </TouchableOpacity>
-                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                        <TouchableOpacity>
-                            <Notifications />
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{ marginLeft: 20 }}>
-                            <Calender />
-                        </TouchableOpacity>
-                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate('NotificationsModal')}>
+                        <Notifications />
+                    </TouchableOpacity>
                 </View>
                 <View style={{ marginTop: 30 }}>
                     <ScrollView>
-                        <Text style={{ fontSize: 16, fontFamily: 'Barlow_600SemiBold', marginBottom: 15, opacity: 0.4 }}>People To Follow</Text>
+                        <Text style={{ fontSize: 16, fontFamily: 'Barlow_600SemiBold', marginBottom: 15, opacity: 0.4 }}>People You Follow</Text>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -48,10 +45,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -62,10 +61,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -76,10 +77,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -90,10 +93,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -104,10 +109,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -118,10 +125,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -132,10 +141,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -146,10 +157,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
@@ -160,10 +173,12 @@ export default function People({ navigation }) {
                         </View>
                         <View style={{ marginBottom: 20 }}>
                             <View style={{ display: 'flex', flexDirection: 'row', }}>
-                                <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <TouchableOpacity onPress={() => navigation.navigate('UsersProfile')}>
+                                    <Image style={{ width: 60, height: 60, borderRadius: 20 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                </TouchableOpacity>
                                 <View style={{ marginLeft: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <View>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
+                                        <Text onPress={() => navigation.navigate('UsersProfile')} style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 20, }}>Dev Ninja</Text>
                                     </View>
                                     <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingLeft: 20, marginLeft: 20, paddingRight: 20, paddingTop: 6, paddingBottom: 6, borderRadius: 9999, backgroundColor: '#7C3AED' }}>
                                         <Text style={{ marginRight: 5, fontSize: 16, fontFamily: 'Barlow_600SemiBold', color: '#FFF' }}>+</Text>
