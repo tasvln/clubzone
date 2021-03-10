@@ -27,7 +27,6 @@ export default function SignUp({ navigation }) {
                                 <TextInput 
                                     style={{ padding: 20, backgroundColor: '#FFF', marginTop: 10, borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24 }}
                                     placeholder='Username'
-                                    keyboardType='phone-pad'
                                 />
                             </View>
                             <View style={{ marginBottom: 20 }}>
