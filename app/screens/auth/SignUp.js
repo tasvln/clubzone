@@ -13,11 +13,11 @@ export default function SignUp({ navigation }) {
                                 <Text style={{ fontFamily: 'Barlow_600SemiBold', color: '#8B5CF6', fontSize: 18 }}>Enter Your Full Name</Text>
                                 <View style={{  marginTop: 10, display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}> 
                                     <TextInput 
-                                        style={{ padding: 20, backgroundColor: '#FFF', borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24 }}
+                                        style={{ padding: 20, backgroundColor: '#FFF', borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24, width: '45%' }}
                                         placeholder='First Name'
                                     /> 
                                     <TextInput 
-                                        style={{ padding: 20,  backgroundColor: '#FFF', borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24 }}
+                                        style={{ padding: 20,  backgroundColor: '#FFF', borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24, width: '50%' }}
                                         placeholder='Last Name'
                                     />
                                 </View>
@@ -30,11 +30,11 @@ export default function SignUp({ navigation }) {
                                 />
                             </View>
                             <View style={{ marginBottom: 20 }}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', color: '#8B5CF6', fontSize: 18 }}>Enter Phone Number</Text>
+                                <Text style={{ fontFamily: 'Barlow_600SemiBold', color: '#8B5CF6', fontSize: 18 }}>Enter Email</Text>
                                 <TextInput 
                                     style={{ padding: 20, backgroundColor: '#FFF', marginTop: 10, borderRadius: 10, color: '#1F2937', fontFamily: 'Barlow_400Regular', fontSize: 24 }}
-                                    placeholder='+2340000000000'
-                                    keyboardType='phone-pad'
+                                    placeholder='club@zone.co'
+                                    keyboardType='email-address'
                                 />
                             </View>
                             <TouchableOpacity style={{ padding: 20, marginTop: 10, backgroundColor: '#8B5CF6', borderRadius: 10, }} onPress={() => navigation.navigate('Verify')}>

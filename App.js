@@ -1,5 +1,6 @@
 import React from 'react'
 import Routes from './routes/Routes';
+import { StatusBar } from 'expo-status-bar';
 import { 
   Barlow_100Thin,
   Barlow_100Thin_Italic,
@@ -48,6 +49,9 @@ export default function App() {
     return <AppLoading />;
   }
   return (
-    <Routes />
+    <>
+      <StatusBar style="auto" />
+      <Routes />
+    </>
   );
 }

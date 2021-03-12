@@ -254,14 +254,8 @@ export default function Zones({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                     <Hom />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Zones')}>
-                    <Category />
-                </TouchableOpacity>
                 <TouchableOpacity>
                     <Add />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('People')}>
-                    <Users />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                     <Profil />

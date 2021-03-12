@@ -59,18 +59,12 @@ export default function Profile({ navigation }) {
                     </View>
                 </View> */}
             </View>
-            <View style={{ padding: 20, backgroundColor: '#EDE9FE', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <View style={{ padding: 20, backgroundColor: '#EDE9FE', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                     <Hom />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Zones')}>
-                    <Category />
-                </TouchableOpacity>
                 <TouchableOpacity>
                     <Add />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('People')}>
-                    <Users />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                     <Profil />

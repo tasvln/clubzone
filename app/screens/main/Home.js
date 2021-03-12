@@ -11,12 +11,13 @@ import Category from '../../components/svgicons/Category';
 import Profile from '../../components/svgicons/Profile';
 import Add from '../../components/svgicons/Add';
 import Users from '../../components/svgicons/Users';
+import Share from '../../components/svgicons/Share'
 
 
 export default function Home({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{ padding: 20, flex: 1 }}>
+            <View style={{ paddingLeft: 20, paddingRight: 20, marginTop: 20, paddingBottom: 20, flex: 1 }}>
                 <View style={styles.Header}>
                     <TouchableOpacity onPress={() => navigation.navigate('ExploreModal')}>
                         <Search />
@@ -48,168 +49,85 @@ export default function Home({ navigation }) {
                     <View style={{ marginTop: 30 }}>
                         <ScrollView contentContainerStyle={{  }}>
                             <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
                                 </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, alignItems: 'center' }}>
+                                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, marginLeft: 5, color: '#1F2937' }}>+999 Others</Text>
+                                    </View>
+                                    <Share />
                                 </View>
                             </View>
                             <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
                                 </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, alignItems: 'center' }}>
+                                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, marginLeft: 5, color: '#1F2937' }}>+999 Others</Text>
+                                    </View>
+                                    <Share />
                                 </View>
                             </View>
                             <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
                                 </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, alignItems: 'center' }}>
+                                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, marginLeft: 5, color: '#1F2937' }}>+999 Others</Text>
+                                    </View>
+                                    <Share />
                                 </View>
                             </View>
                             <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
                                 </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, alignItems: 'center' }}>
+                                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, marginLeft: 5, color: '#1F2937' }}>+999 Others</Text>
+                                    </View>
+                                    <Share />
                                 </View>
                             </View>
                             <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
                                 </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
-                                </View>
-                            </View>
-                            <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 60, alignItems: 'center' }}>
+                                    <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Image style={{ width: 50, height: 50, borderRadius: 9999, borderWidth: 2, borderColor: '#FFFBEB', marginLeft: -25 }} source={{ uri: 'https://picsum.photos/200/300' }} />
+                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, marginLeft: 5, color: '#1F2937' }}>+999 Others</Text>
                                     </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
-                                </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
-                                </View>
-                            </View>
-                            <View style={styles.Cards}>
-                                <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 16, color: '#1F2937', marginBottom: 2 }}>Food Zone</Text>
-                                <Text style={{ fontFamily: 'Barlow_700Bold', fontSize: 24, color: '#1F2937' }}>👨‍🍳👩‍🍳 Random Bants About Cooking Food</Text>
-                                <View style={{ display: 'flex', flexDirection: 'row', marginTop: 15 }}>
-                                    <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB' }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                        <Image style={{ width: 50, height: 50, borderRadius: 20, borderWidth: 2.5, borderColor: '#FFFBEB', marginTop: 20, marginLeft: -30 }} source={{ uri: 'https://picsum.photos/200/300' }} />
-                                    </View>
-                                    <View style={{ marginLeft: 10 }}>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>John Doe 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Tobi Yani 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Yemisi Rich 💬</Text>
-                                        <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 18, color: '#1F2937', marginBottom: 2 }}>Omoineededlong name 💬</Text>
-                                    </View>
-                                </View>
-                                <View style={{ marginTop: 10, display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>999 👨‍🍳👩‍🍳</Text>
-                                    <Text style={{ fontFamily: 'Barlow_500Medium', fontSize: 20, color: '#1F2937', marginLeft: 5, marginRight: 5, opacity: 0.6 }}>/</Text>
-                                    <Text style={{ fontFamily: 'Barlow_600SemiBold', fontSize: 14, color: '#1F2937', opacity: 0.6 }}>9999 💬</Text>
+                                    <Share />
                                 </View>
                             </View>
                         </ScrollView>
                     </View>
                 </View>
             </View>
-            <View style={{ padding: 20, backgroundColor: '#EDE9FE', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <View style={{ padding: 20, backgroundColor: '#EDE9FE', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                     <Hom />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Zones')}>
-                    <Category />
-                </TouchableOpacity>
                 <TouchableOpacity>
                     <Add />
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('People')}>
-                    <Users />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                     <Profile />
